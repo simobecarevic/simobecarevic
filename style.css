@@ -5,7 +5,7 @@
 
 body {
     background-color: rgb(255, 255, 255);
-    display: grid;
+    /* display: flex; */
     font-family:Georgia, 'Times New Roman', Times, serif;
     margin: 0 auto;
     max-width: 900px;
@@ -39,4 +39,6 @@ nav a {
     /* padding: 20px; */
 }
 
-
+h2 {
+    
+}
