@@ -1,1 +1,9 @@
 /* Test */
+
+* {
+    all: unset;
+}
+
+.profile-pic {
+    width: 200px;
+}
