@@ -1,9 +1,12 @@
 /* Test */
 
 * {
-    all: unset;
-}
+    /* all: unset; */
+    margin: 0; /* When these properties are set to 0, they do not require a unit of measurement. */
+    padding: 0;
+} 
 
 .profile-pic {
     width: 200px;
 }
+
