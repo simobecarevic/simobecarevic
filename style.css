@@ -4,9 +4,108 @@
     /* all: unset; */
     margin: 0; /* When these properties are set to 0, they do not require a unit of measurement. */
     padding: 0;
+    color: black;
+    text-decoration: none;
 } 
 
-.profile-pic {
-    width: 200px;
+
+html {
+    font-family: Helvetica Neue, Arial, Helvetica, sans-serif;
 }
 
+a:hover {
+    color: red;
+    font-weight: 800;
+}
+
+a:active {
+    font-weight: 800;
+}
+
+a:visited {
+    font-weight: 800;
+}
+
+/* main {
+    display: grid;
+} */
+
+header {
+    width: 80%;
+    margin: 0 auto;
+    /* display: flex; */
+    padding: 25px 0 0;
+}
+
+.simo-header {
+    width: 15%;
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+}
+
+nav {
+    
+}
+
+.header-nav {
+    display: inline-block;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.header-nav-item {
+    display: inline-block;
+    margin: 0 20px 0 0; 
+    font-size: 0.875rem;
+}
+
+.main-content {
+    margin: auto;
+    width: 80%;
+}
+
+.profile-picture-headings {
+    padding: 30px 0 0 0; 
+    display: flex;
+}
+
+.profile-headings {
+    /* display: inline-block; */
+    height: 200px;
+    padding: 20px 0 0 25px;
+    display: grid;
+    /* grid-template: 2;  */
+}
+
+.simo-heading {
+    text-transform: uppercase;
+    font-size: 1.875rem;
+}
+
+.profile-pic {
+    width: 250px;
+    border-radius: 50%;
+}
+
+.introductory-paragraph {
+    margin: 30px 0px;
+}
+
+.svg-location-pin {
+    color: grey;
+    margin: 5px 0;
+}
+
+.location {
+    display: inline-block;
+}
+
+.github {
+    font-size: 1.5rem;
+}
+
+.linkedin {
+    font-size: 1.5rem;
+}
