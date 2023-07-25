@@ -1,5 +1,7 @@
 /* Test */
 
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
+
 * {
     /* all: unset; */
     margin: 0; /* When these properties are set to 0, they do not require a unit of measurement. */
@@ -10,7 +12,7 @@
 
 
 html {
-    font-family: Helvetica Neue, Arial, Helvetica, sans-serif;
+    font-family: /* Roboto, */ Helvetica Neue, Arial, Helvetica, sans-serif;
 }
 
 a:hover {
@@ -75,13 +77,13 @@ nav {
     /* display: inline-block; */
     height: 200px;
     padding: 20px 0 0 25px;
-    display: grid;
-    /* grid-template: 2;  */
+    margin: auto 0; 
 }
 
 .simo-heading {
     text-transform: uppercase;
     font-size: 1.875rem;
+    margin: 0 0 15px 0;
 }
 
 .profile-pic {
@@ -93,19 +95,47 @@ nav {
     margin: 30px 0px;
 }
 
+.svg-suitcase {
+    
+}
+
 .svg-location-pin {
-    color: grey;
-    margin: 5px 0;
+    
+}
+
+.job-title {
+    margin: 10px 0;
 }
 
 .location {
-    display: inline-block;
+    margin: 10px 0;
+    color: grey; 
+}
+
+.skills {
+    margin: 12.5px 0; 
+}
+
+.skill {
+    border-radius: 0.125rem;
+    font-size: 0.75rem;
+    background-color: rgb(229 231 235);
+    padding: 4px 8px;
 }
 
 .github {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+    margin: 0 7.5px 0 0; 
 }
 
 .linkedin {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+}
+
+.introductory-paragraph a {
+    text-decoration: underline;
+}
+
+.hi, .animation {
+    display: inline-block;
 }
