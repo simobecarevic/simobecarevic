@@ -35,10 +35,17 @@ a:visited {
 } */
 
 header {
+    /* display: flex; */
+    width: 100%;
+    padding: 25px 0;
+    position: fixed;
+    z-index: 999;
+    background-color: white; /* otherwise will be transparent */
+}
+
+.header-content {
     width: 80%;
     margin: 0 auto;
-    /* display: flex; */
-    padding: 25px 0 0;
 }
 
 .simo-header {
@@ -71,7 +78,7 @@ nav {
 }
 
 .profile-picture-headings {
-    padding: 30px 0 0 0; 
+    padding: 79.2px 0 0 0; 
     display: flex;
 }
 
