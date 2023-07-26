@@ -35,11 +35,10 @@ a:visited {
 } */
 
 header {
-    /* display: flex; */
-    width: 100%;
-    padding: 25px 0;
     position: fixed;
     z-index: 999;
+    width: 100%;
+    padding: 25px 0;
     background-color: white; /* otherwise will be transparent */
 }
 
@@ -62,7 +61,6 @@ nav {
 
 .header-nav {
     display: inline-block;
-    justify-content: space-around;
     list-style: none;
 }
 
@@ -148,3 +146,44 @@ nav {
 .hi, .animation {
     display: inline-block;
 }
+
+form {
+    margin: 0 auto;
+    padding: 100px 0 0 0;
+}
+
+form h1, form input, form textarea, form button {
+    display: block;
+}
+
+form h1 {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    color: black;
+    font-weight: 700px;
+}
+
+form input, form textarea, form button {
+    border: 1px solid #e5e7eb; /* Gray border */
+    border-radius: .375rem; /* Rounded borders */
+}
+
+form textarea {
+    font-family: Helvetica Neue, Arial, Helvetica, sans-serif;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+.footer-div {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
