@@ -156,12 +156,29 @@ nav {
 }
 
 .bookshelf {
-    
+
 }
 
 .book {
-
+    width: 150px;
+    height: auto;
 }
+
+footer {
+    /* position: fixed; */
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+.footer-div {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
 
 /* 
 contact_me.html
@@ -233,20 +250,6 @@ form button:hover {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
 }
 
-footer {
-    position: fixed;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-}
-
-.footer-div {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
-}
 
 
 

@@ -81,14 +81,46 @@
             </div>
             <h1 class="hi">Hello, I'm </h1>
             <h1 class="animation">
-                <a href="" class="typewrite" data-period="2000" data-type='[ "Simo.", "a software enthusiast.", "insatiably curious.", "an indefatigable learner.", "a voracious reader.", "a gregarious lad."]'>
+                <a href="" class="typewrite" data-period="1200" data-type='[ "Simo.", "a software enthusiast.", "insatiably curious.", "an indefatigable learner.", "a voracious reader.", "a gregarious chap."]'>
                   <span class="wrap"></span>
                 </a>
             </h1>
             <div class="bookshelf-container">
                 <h1 class="bookshelf-heading">My Bookshelf 📚</h1>
                 <div class="bookshelf">
-
+                    <div class="book-div">
+                        <a class="book-link" href="https://www.amazon.ca/Lincoln-Highway-Novel-Amor-Towles/dp/0735222355/ref=sr_1_1?keywords=lincoln+highway&qid=1690499584&sprefix=Lincoln+Hi%2Caps%2C91&sr=8-1" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/91DUhtU6KCL.jpg" alt="" class="book">
+                        </a>
+                    </div>
+                    <div class="book-div">
+                        <a class="book-link" href="https://www.amazon.ca/Code-Language-Computer-Hardware-Software/dp/0137909101#immersive-view_1690495993330" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/41L2wQmAi8L.jpg" alt="Code by Charles Petzold" class="book">
+                        </a>
+                    </div>
+                    <div class="book-div">
+                        <a class="book-link" href="https://www.amazon.ca/Software-Engineering-Google-Lessons-Programming/dp/1492082791/ref=sr_1_1?crid=1XX41RLF6GC4Q&keywords=Google+software&qid=1690499780&sprefix=google+software%2Caps%2C102&sr=8-1" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/81bSa9px6qL.jpg" alt="" class="book">
+                        </a>
+                    </div>
+                    <div class="book-div">
+                        <a class="book-link" href="https://www.amazon.ca/Journey-Edge-Reason-Life-G%C3%B6del/dp/1324005440/ref=sr_1_1?crid=OK0O26E0ZWUM&keywords=kurt+godel+journey&qid=1690498764&sprefix=kurt+godel+journey%2Caps%2C111&sr=8-1" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/71AiJDMiVQL.jpg" alt="" class="book">
+                        </a>
+                    </div>
+                    <div class="book-div">
+                        <a class="book-link" href="https://www.amazon.ca/Immigrant-Inventor-Autobiography-Serbian-American-Long-Distance/dp/1789871298/ref=sr_1_4?crid=2XPJT4C3IJ8KE&keywords=Michael+Pupin+From+Immigrant&qid=1690499428&sprefix=michael+pupin+from+immigrant%2Caps%2C86&sr=8-4" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/719ud5PBgJL.jpg" alt="" class="book">
+                        </a>
+                    </div>
+                    <div class="book-div">
+                        <a class="book-link" href="https://www.amazon.ca/Lincoln-Highway-Novel-Amor-Towles/dp/0735222355/ref=sr_1_1?keywords=lincoln+highway&qid=1690499584&sprefix=Lincoln+Hi%2Caps%2C91&sr=8-1" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/91DUhtU6KCL.jpg" alt="" class="book">
+                        </a>
+                    </div>
+                    
+                    
+                    
                 </div>
             </div>
         </div>
@@ -124,7 +156,7 @@
         this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
 
         var that = this;
-        var delta = 200 - Math.random() * 100;
+        var delta = 180 - ((Math.random() * 0.2 + 0.79) * 100);
 
         if (this.isDeleting) { delta /= 2; }
 
