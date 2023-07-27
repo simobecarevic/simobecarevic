@@ -24,14 +24,20 @@
     </header>
     <main>
         <div class="main-content">
-            <form action="" class="contact-form">
-                <h1 class="contact-form-header" id="contact-me">Contact</h1>
-                <input type="text" name="name" id="name" placeholder="Name">
-                <input type="text" name="email" id="Email" placeholder="Email">
-                <textarea name="" id="" cols="30" rows="4" placeholder="Message"></textarea>
-                <button>Let's Do It
-                </button>
-            </form>
+            <div class="form-container">
+                <form class="contact-form"  method="POST" action="https://api.web3forms.com/submit">
+                    <h1 class="contact-form-header" id="contact-me">Feel Free to Reach Out 🙂</h1>
+                    <input type="hidden" name="access_key" value="df8e8d7b-5047-4ca4-b627-33e6079e200e">
+                    <input type="text" name="name" id="name" placeholder="Name" required>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                    <textarea name="message" id="message" cols="30" rows="4" placeholder="Message" required></textarea>
+                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                    <button type="submit" value="Submit">
+                        <!-- Have to put Btn txt in sep El in order to STYLE it -->
+                        <span class="button-text">Work With Me</span>
+                    </button>
+                </form>
+            </div>
         </div>
     </main>
     <footer>

@@ -147,29 +147,70 @@ nav {
     display: inline-block;
 }
 
+/* 
+contact_me.html
+
+Contact Me Form 
+*/
+
+@media (min-width: 768px) {
+    .contact-form {    
+        width: 58.333%;
+    }
+    /* K* Have to use HIGHER specificity Selector */
+}
+
 form {
     margin: 0 auto;
     padding: 100px 0 0 0;
+    width: 100%;
 }
 
 form h1, form input, form textarea, form button {
     display: block;
 }
 
-form h1 {
-    font-size: 1.5rem;
-    text-decoration: underline;
-    color: black;
-    font-weight: 700px;
+form input, form textarea, form button {
+    border-radius: .375rem; /* Rounded borders */
 }
 
-form input, form textarea, form button {
-    border: 1px solid #e5e7eb; /* Gray border */
-    border-radius: .375rem; /* Rounded borders */
+form input, form textarea {
+    border: 2px solid #e5e7eb; /* Gray border */
+    width: 100%;
+    padding: 8px;
+    font-weight: 900px;
+}
+
+form h1 {
+    font-size: 1.5rem;
+    /* text-decoration: underline; */
+    color: black;
+    margin: 0 0 15px;
+    display: inline-block;
+}
+
+#email {
+    margin: 8px 0;
 }
 
 form textarea {
     font-family: Helvetica Neue, Arial, Helvetica, sans-serif;
+    margin: 0 0 16px;
+}
+
+form button {
+    padding: 12px 32px;
+    /* background-color: #89cff0; */
+    /* Bc has a border-radius set in above CSS rule, need to explicitly state how want border styled ow will be default */
+    border: 0 none;
+    background-image: linear-gradient(to right, #32cd32,#89cff0);
+}
+
+.button-text {
+    font-size: 1rem;
+    color: white;
+    font-weight: 600;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
 }
 
 footer {
@@ -187,3 +228,12 @@ footer {
     padding: 20px 0;
 }
 
+
+
+
+/* projects.html */
+
+.projects-heading {
+    padding: 110px 0 0 0;
+    font-size: 1.875rem;
+}
