@@ -147,6 +147,22 @@ nav {
     display: inline-block;
 }
 
+.bookshelf-container {
+    padding: 60px 0; 
+}
+
+.bookshelf-heading {
+    font-size: 1.2rem;
+}
+
+.bookshelf {
+    
+}
+
+.book {
+
+}
+
 /* 
 contact_me.html
 
@@ -204,6 +220,10 @@ form button {
     /* Bc has a border-radius set in above CSS rule, need to explicitly state how want border styled ow will be default */
     border: 0 none;
     background-image: linear-gradient(to right, #32cd32,#89cff0);
+}
+
+form button:hover {
+    box-shadow: 0 8px 10px 0 rgba(0,0,0,0.1);
 }
 
 .button-text {
