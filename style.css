@@ -71,12 +71,12 @@ nav {
 }
 
 .main-content {
-    margin: auto;
+    margin: 0 auto;
     width: 80%;
 }
 
 .profile-picture-headings {
-    padding: 79.2px 0 0 0; 
+    padding: 79.2px 0 0; 
     display: flex;
 }
 
@@ -145,10 +145,12 @@ nav {
 
 .hi, .animation {
     display: inline-block;
+    padding: 10px 0; 
 }
 
 .bookshelf-container {
     padding: 60px 0; 
+    width: 100%;
 }
 
 .bookshelf-heading {
@@ -156,11 +158,18 @@ nav {
 }
 
 .bookshelf {
+    margin: 30px auto 0;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.book-div {
+    display: inline-block;
 }
 
 .book {
-    width: 150px;
+    width: 120px;
     height: auto;
 }
 
