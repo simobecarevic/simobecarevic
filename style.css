@@ -364,26 +364,6 @@ form button:hover {
         padding: 20px 0 0;
     }
 
-    .profile-picture-headings {
-        display: block;
-        padding: 55px 0 0;
-    }
-
-    img {
-        display: block;
-        margin: 0 auto;
-    }
-
-    .profile-headings {
-        display: block;
-        margin: 0 auto;
-        padding: 10px 0 0;
-    }
-
-    .animation {
-        font-size: 0.75rem;
-    }
-
     .simo-header {
         font-size: 0.9rem;
     }
@@ -393,6 +373,39 @@ form button:hover {
         margin: 0 10px 0 0;
     }    
 
+    .profile-picture-headings {
+        display: block;
+        padding: 55px 0 0;
+        margin: 0 0 25px;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .simo-heading, .job-title, .location, .skills {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .profile-headings {
+        display: block;
+        margin: 0 auto;
+        padding: 10px 0 0;
+    }
+
+    .professional-links {
+        display: flex;
+        justify-content: center;
+    }
+
+    .animation {
+        font-size: 0.6rem;
+    }
+
+    
 }
 
 @media screen and (max-width: 359px) {
