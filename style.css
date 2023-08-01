@@ -364,7 +364,7 @@ form button:hover {
 @media screen and (max-width: 495px) {
 
     header {
-        padding: 20px 0 0;
+        padding: 16px 0;
     }
 
     .simo-header {
