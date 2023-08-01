@@ -120,6 +120,10 @@ nav {
     color: grey; 
 }
 
+.heading-space {
+    display: none;
+}
+
 .skills {
     margin: 12.5px 0; 
 }
@@ -147,7 +151,7 @@ nav {
 .animation {
     display: inline-block;
     margin: 10px 0;
-    font-size: 1gitrem;
+    font-size: 1rem;
 }
 
 .animation h1 {
@@ -397,6 +401,10 @@ form button:hover {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+    }
+
+    .heading-space {
+        display: inline;
     }
 
     .skill {
