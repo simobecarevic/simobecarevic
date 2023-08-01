@@ -418,6 +418,8 @@ form button:hover {
 
     .animation {
         font-size: 0.6rem;
+        margin: 10px 0 0; 
+        height: 46px;
     }
 
     .bookshelf-heading {
@@ -425,7 +427,7 @@ form button:hover {
     }
 
     .bookshelf-container {
-        padding: 40px 0 60px;
+        padding: 27px 0 60px;
     }
 
     .book {
