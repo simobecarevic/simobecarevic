@@ -151,7 +151,7 @@ nav {
 .animation {
     display: inline-block;
     margin: 10px 0;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .animation h1 {
@@ -318,6 +318,10 @@ form button:hover {
     .simo-heading {
         font-size: 1.5rem;
         margin: 0 0 10px;
+    }
+
+    .animation {
+        font-size: 0.65rem;
     }
 
     .github {
