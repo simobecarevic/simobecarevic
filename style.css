@@ -74,10 +74,19 @@ nav {
     font-size: 0.875rem;
 }
 
-.color-mode {
+.color-toggle {
     display: inline-block;
     float: right;
 }
+
+.color-toggle-btn {
+    
+}
+
+.color-toggle-img {
+    width: 20px;
+}
+
 
 /* main */
 
