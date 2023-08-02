@@ -21,7 +21,9 @@
                 <li class="header-nav-item"><a href="contact_me.html">CONTACT ME</a></li>
             </ul>
             <div class="color-mode">
-                <button class="color-toggle" onclick="toggleDarkMode()">THEME</button>
+                <button class="color-toggle" onclick="toggleDarkMode()">
+                    <img src="" alt="">
+                </button>
             </div>
         </div>
     </header>
@@ -136,7 +138,12 @@
         </div>
     </footer>
     <script>
-        function toggleDarkMode() {
+        console.log(sessionStorage.getItem('mode'));
+        if (!sessionStorage.getItem('mode')) {        
+            sessionStorage.setItem('mode', 'light');
+            console.log(sessionStorage);
+        } 
+        else if (sessionStorage.getItem('mode') == 'dark') {
             var intro_p = document.querySelector(".introductory-paragraph p");
             intro_p.classList.toggle("dark-mode");
             var body_el = document.querySelector("body");
@@ -145,6 +152,36 @@
             header_el.classList.toggle("dark-mode");
             var footer_el = document.querySelector("footer");
             footer_el.classList.toggle("dark-mode");
+            console.log(sessionStorage);
+        }
+        else {
+            
+        }
+        function toggleDarkMode() {
+            if (sessionStorage.getItem('mode') == 'light') {
+                var intro_p = document.querySelector(".introductory-paragraph p");
+                intro_p.classList.toggle("dark-mode");
+                var body_el = document.querySelector("body");
+                body_el.classList.toggle("dark-mode");
+                var header_el = document.querySelector("header");
+                header_el.classList.toggle("dark-mode");
+                var footer_el = document.querySelector("footer");
+                footer_el.classList.toggle("dark-mode");
+                sessionStorage.setItem('mode', 'dark');
+                console.log(sessionStorage);
+            }
+            else {
+                var intro_p = document.querySelector(".introductory-paragraph p");
+                intro_p.classList.toggle("dark-mode");
+                var body_el = document.querySelector("body");
+                body_el.classList.toggle("dark-mode");
+                var header_el = document.querySelector("header");
+                header_el.classList.toggle("dark-mode");
+                var footer_el = document.querySelector("footer");
+                footer_el.classList.toggle("dark-mode");
+                sessionStorage.setItem('mode', 'light');
+                console.log(sessionStorage);
+            }
         }
     </script>
     <script>

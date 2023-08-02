@@ -20,7 +20,11 @@
                 <li class="header-nav-item"><a href="projects.html" style="font-weight: 800;">PROJECTS</a></li>
                 <!-- <li class="header-nav-item"><a href="experiences.html">EXPERIENCES</a></li> -->
                 <li class="header-nav-item"><a href="contact_me.html">CONTACT ME</a></li>
-            </ul>            
+            </ul>  
+            
+            <div class="color-mode">
+                <button class="color-toggle" onclick="toggleDarkMode()">THEME</button>
+            </div>
         </div>
     </header>
     <main>
@@ -35,5 +39,48 @@
             <a href="https://linkedin.com/in/simobecarevic" target="_blank"><span class="fa-brands fa-linkedin linkedin"></span></a>
         </div>
     </footer>
+    <script>
+        console.log(sessionStorage.getItem('mode'));
+        if (!sessionStorage.getItem('mode')) {        
+            sessionStorage.setItem('mode', 'light');
+            console.log(sessionStorage);
+        } 
+        else if (sessionStorage.getItem('mode') === 'dark') {
+            var body_el = document.querySelector("body");
+            body_el.classList.toggle("dark-mode");
+            var header_el = document.querySelector("header");
+            header_el.classList.toggle("dark-mode");
+            var footer_el = document.querySelector("footer");
+            footer_el.classList.toggle("dark-mode");
+            console.log(sessionStorage);
+        }
+        else {
+            
+        }
+        function toggleDarkMode() {
+            if (sessionStorage.getItem('mode') == 'light') {
+                
+                var body_el = document.querySelector("body");
+                body_el.classList.toggle("dark-mode");
+                var header_el = document.querySelector("header");
+                header_el.classList.toggle("dark-mode");
+                var footer_el = document.querySelector("footer");
+                footer_el.classList.toggle("dark-mode");
+                sessionStorage.setItem('mode', 'dark');
+                console.log(sessionStorage);
+            }
+            else {
+                
+                var body_el = document.querySelector("body");
+                body_el.classList.toggle("dark-mode");
+                var header_el = document.querySelector("header");
+                header_el.classList.toggle("dark-mode");
+                var footer_el = document.querySelector("footer");
+                footer_el.classList.toggle("dark-mode");
+                sessionStorage.setItem('mode', 'light');
+                console.log(sessionStorage);
+            }
+        }
+    </script>
 </body>
 </html>

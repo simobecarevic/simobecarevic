@@ -36,6 +36,8 @@ a:visited {
     display: grid;
 } */
 
+/* header */
+
 header {
     position: fixed;
     z-index: 999;
@@ -71,6 +73,13 @@ nav {
     margin: 0 20px 0 0; 
     font-size: 0.875rem;
 }
+
+.color-mode {
+    display: inline-block;
+    float: right;
+}
+
+/* main */
 
 .main-content {
     margin: 0 auto;
