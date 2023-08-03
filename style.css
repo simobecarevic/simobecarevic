@@ -59,9 +59,6 @@ header {
     letter-spacing: 0.1em;
 }
 
-nav {
-    
-}
 
 .header-nav {
     display: inline-block;
@@ -75,16 +72,33 @@ nav {
 }
 
 .color-toggle {
-    display: inline-block;
+    /* display: inline-block; */
     float: right;
+    /* position: fixed;
+    right: 5rem; */
 }
 
-.color-toggle-btn {
-    
+.light-toggle-btn {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    background-color: #89cff0; 
+    border-radius: 0.375rem;
+    border-style: none;
 }
 
-.color-toggle-img {
-    width: 20px;
+.color-toggle-svg {
+    width: 1.25rem;
+    padding: 2.25px;
+}
+
+.dark-toggle-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    background-color: yellow;
+    border-radius: 0.375rem;
+    border-style: none;
 }
 
 
@@ -161,6 +175,10 @@ nav {
     text-decoration: underline;
 }
 
+/* Below is from the animation script, this is injected into bottom of <body>; was experimenting to see what would happen if put it here */
+/* .typewrite > .wrap { border-right: 0.08em solid #000}"
+*/
+
 .animation {
     display: inline-block;
     margin: 10px 0;
@@ -170,6 +188,11 @@ nav {
 .animation h1 {
     display: inline-block;
 }
+
+.typewrite > .wrap { 
+    border-right: 0.08em solid #000;
+}
+
 
 .bookshelf-container {
     padding: 60px 0; 
@@ -333,6 +356,10 @@ form button:hover {
         margin: 0 0 10px;
     }
 
+    .color-toggle {
+        right: 5rem;
+    }
+
     .animation {
         font-size: 0.65rem;
     }
@@ -397,6 +424,11 @@ form button:hover {
         margin: 0 10px 0 0;
     }    
 
+    .color-toggle-svg {
+        width: 1rem;
+        padding: 2px;
+    }
+
     .profile-picture-headings {
         display: block;
         padding: 55px 0 0;
@@ -454,7 +486,7 @@ form button:hover {
     
 }
 
-@media screen and (max-width: 359px) {
+@media screen and (max-width: 388px) {
 
     .header-content {
         width: 90%;
@@ -477,7 +509,9 @@ form button:hover {
 
 }
 
+
 .dark-mode {
     color: white;
     background-color: black;
 }
+

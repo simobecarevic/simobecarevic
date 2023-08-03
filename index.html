@@ -21,8 +21,15 @@
                 <li class="header-nav-item"><a href="contact_me.html">CONTACT ME</a></li>
             </ul>
             <div class="color-toggle">
-                <button class="color-toggle-btn" onclick="toggleDarkMode()">
-                    <img src="images/moon-svgrepo-com.svg" class="color-toggle-img" alt="Dark Mode">
+                <button class="light-toggle-btn" onclick="toggleDarkMode()">
+                    <svg class="color-toggle-svg"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.32031 11.6835C3.32031 16.6541 7.34975 20.6835 12.3203 20.6835C16.1075 20.6835 19.3483 18.3443 20.6768 15.032C19.6402 15.4486 18.5059 15.6834 17.3203 15.6834C12.3497 15.6834 8.32031 11.654 8.32031 6.68342C8.32031 5.50338 8.55165 4.36259 8.96453 3.32996C5.65605 4.66028 3.32031 7.89912 3.32031 11.6835Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="dark-toggle-btn" onclick="toggleDarkMode()">
+                    <svg class="color-toggle-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 3V4M12 20V21M4 12H3M6.31412 6.31412L5.5 5.5M17.6859 6.31412L18.5 5.5M6.31412 17.69L5.5 18.5001M17.6859 17.69L18.5 18.5001M21 12H20M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                 </button>
             </div>
         </div>
@@ -144,21 +151,16 @@
             console.log(sessionStorage);
         } 
         else if (sessionStorage.getItem('mode') == 'dark') {
-            var intro_p = document.querySelector(".introductory-paragraph p");
-            intro_p.classList.toggle("dark-mode");
-            var body_el = document.querySelector("body");
-            body_el.classList.toggle("dark-mode");
-            var header_el = document.querySelector("header");
-            header_el.classList.toggle("dark-mode");
-            var footer_el = document.querySelector("footer");
-            footer_el.classList.toggle("dark-mode");
-            console.log(sessionStorage);
+            sessionStorage.setItem('mode', 'light');
+            toggleDarkMode();
         }
-        else {
-            
-        }
+
+
         function toggleDarkMode() {
             if (sessionStorage.getItem('mode') == 'light') {
+                document.querySelector(".light-toggle-btn").style.display = "none"; 
+                document.querySelector(".dark-toggle-btn").style.display = "flex"; 
+                
                 var intro_p = document.querySelector(".introductory-paragraph p");
                 intro_p.classList.toggle("dark-mode");
                 var body_el = document.querySelector("body");
@@ -167,10 +169,38 @@
                 header_el.classList.toggle("dark-mode");
                 var footer_el = document.querySelector("footer");
                 footer_el.classList.toggle("dark-mode");
+
+                let job_title = document.querySelector(".job-title");
+                job_title.classList.toggle("dark-mode");
+                let suitcase_svg = document.querySelector(".job-title svg path");
+                suitcase_svg.setAttribute("stroke","#fff");
+                let animation_cursor = document.querySelector("span.wrap");
+                animation_cursor.setAttribute("style", "border-right: 0.08em solid #fff;");
+                
+
+                var anchors = document.querySelectorAll("a");
+                anchors.forEach(function(el){
+                    el.classList.toggle("dark-mode");
+                });
+                var headings = document.querySelectorAll("h1");
+                headings.forEach(function(el){
+                    el.classList.toggle("dark-mode");
+                });
+                var icons = document.querySelectorAll(".fa-brands");
+                icons.forEach(function(el){
+                    el.setAttribute("style", "color: white;");
+                });
+
+                var cursor_colour = '#fff';
+                
                 sessionStorage.setItem('mode', 'dark');
                 console.log(sessionStorage);
             }
+        
             else {
+                document.querySelector(".light-toggle-btn").style.display = "flex"; 
+                document.querySelector(".dark-toggle-btn").style.display = "none"; 
+                
                 var intro_p = document.querySelector(".introductory-paragraph p");
                 intro_p.classList.toggle("dark-mode");
                 var body_el = document.querySelector("body");
@@ -179,18 +209,46 @@
                 header_el.classList.toggle("dark-mode");
                 var footer_el = document.querySelector("footer");
                 footer_el.classList.toggle("dark-mode");
+
+                let job_title = document.querySelector(".job-title");
+                job_title.classList.toggle("dark-mode");
+                let suitcase_svg = document.querySelector(".job-title svg path");
+                /* MAJOR K*: use .setAttribute for HTML Attrs; if changing CSS STYLE prop use .styles.prop_name */
+                suitcase_svg.setAttribute("stroke","#000");
+                let animation_cursor = document.querySelector("span.wrap");
+                animation_cursor.setAttribute("style", "border-right: 0.08em solid #000;");
+
+                var anchors = document.querySelectorAll("a");
+                anchors.forEach(function(el){
+                    el.classList.toggle("dark-mode");
+                });
+                var headings = document.querySelectorAll("h1");
+                headings.forEach(function(el){
+                    el.classList.toggle("dark-mode");
+                });
+                var icons = document.querySelectorAll(".fa-brands");
+                icons.forEach(function(el){
+                    el.setAttribute("style", "color: black;");
+                });
+
+                var cursor_colour = '#000';
+
                 sessionStorage.setItem('mode', 'light');
                 console.log(sessionStorage);
             }
         }
-    </script>
-    <script>
-        var TxtType = function(el, toRotate, period) {
+    
+
+    var TxtType = function(el, toRotate, period) {
         this.toRotate = toRotate;
         this.el = el;
         this.loopNum = 0;
         this.period = parseInt(period, 10) || 2000;
         this.txt = '';
+
+        this.colour = '';
+        
+
         this.tick();
         this.isDeleting = false;
     };
@@ -205,7 +263,17 @@
         this.txt = fullTxt.substring(0, this.txt.length + 1);
         }
 
-        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+        if (window.sessionStorage.getItem('mode') == 'dark') {
+            this.colour = 'white;';
+        }
+        else if (window.sessionStorage.getItem('mode') == 'light') {
+            this.colour = 'black;';
+        }        
+
+        console.log(sessionStorage);
+        console.log(this.colour);
+        
+        this.el.innerHTML = `<span style="color: ${this.colour}" class="wrap">${this.txt}</span>`;
 
         var that = this;
         var delta = 200 - ((Math.random() * 0.2 + 0.79) * 100);
@@ -226,6 +294,7 @@
         }, delta);
     };
 
+
     window.onload = function() {
         var elements = document.getElementsByClassName('typewrite');
         for (var i=0; i<elements.length; i++) {
@@ -235,11 +304,16 @@
               new TxtType(elements[i], JSON.parse(toRotate), period);
             }
         }
-        // INJECT CSS
+        /* 
+        // INJECT CSS, 'FOR typing Cursor!''
+        //Got rid of this & put it in my CSS code, so that can alter colour same way altering other colours
+        console.log(cursor_colour);
         var css = document.createElement("style");
         css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #000}";
+        // Using cursor_colour var I created
+        css.innerHTML = `.typewrite > .wrap { border-right: 0.08em solid ${cursor_colour}}`;
         document.body.appendChild(css);
+        */
     };
     </script>
 </body>
