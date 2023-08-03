@@ -17,7 +17,6 @@ html {
 }
 
 
-
 a:hover {
     color: #89cff0; 
     font-weight: 800;
@@ -109,10 +108,12 @@ header {
     width: 80%;
 }
 
+
 .profile-picture-headings {
     padding: 79.2px 0 0; 
     display: flex;
 }
+
 
 .profile-headings {
     /* display: inline-block; */
@@ -188,8 +189,6 @@ header {
 .animation h1 {
     display: inline-block;
 }
-
-
 
 .bookshelf-container {
     padding: 60px 0; 
@@ -342,7 +341,7 @@ form button:hover {
     /* K* Put this at the bottom , BC OW, CSS declartion of width: 58.3% above, would OVERRIDE this, EVEN when the condition is MET!*/
 }
 
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 700px) {
     .profile-pic {
         width: 175px;
         height: 171px;
@@ -406,7 +405,7 @@ form button:hover {
 
 }
 
-@media screen and (max-width: 495px) {
+@media screen and (max-width: 600px) {
 
     header {
         padding: 16px 0;
@@ -502,6 +501,34 @@ form button:hover {
         font-size: 0.6rem;
         padding: 3px 6px;
         margin: 1px 1px;
+    }
+
+
+    .introductory-paragraph {
+        font-size: 0.8rem;
+        margin: 5px auto 20px;
+    }
+
+
+}
+
+@media screen and (max-width: 340px) {
+    
+    .simo-header {
+        font-size: .75rem;
+        margin: 0 3px 0 0;
+    }
+    
+
+    .header-nav-item {
+        font-size: 0.7rem;
+        margin: 0 4px 0 0;
+
+    }    
+
+    .introductory-paragraph {
+        font-size: 0.75rem;
+        
     }
 
 }
