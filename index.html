@@ -144,7 +144,9 @@
             <a href="https://linkedin.com/in/simobecarevic" target="_blank"><span class="fa-brands fa-linkedin linkedin"></span></a>
         </div>
     </footer>
+
     <script>
+
         console.log(sessionStorage.getItem('mode'));
         if (!sessionStorage.getItem('mode')) {        
             sessionStorage.setItem('mode', 'light');
@@ -174,8 +176,8 @@
                 job_title.classList.toggle("dark-mode");
                 let suitcase_svg = document.querySelector(".job-title svg path");
                 suitcase_svg.setAttribute("stroke","#fff");
-                let animation_cursor = document.querySelector("span.wrap");
-                animation_cursor.setAttribute("style", "border-right: 0.08em solid #fff;");
+                let animation_cursor = document.querySelector(".wrap");
+                animation_cursor.setAttribute("style", "border-right: 0.08em solid #fff");
                 
 
                 var anchors = document.querySelectorAll("a");
@@ -190,8 +192,6 @@
                 icons.forEach(function(el){
                     el.setAttribute("style", "color: white;");
                 });
-
-                var cursor_colour = '#fff';
                 
                 sessionStorage.setItem('mode', 'dark');
                 console.log(sessionStorage);
@@ -215,8 +215,8 @@
                 let suitcase_svg = document.querySelector(".job-title svg path");
                 /* MAJOR K*: use .setAttribute for HTML Attrs; if changing CSS STYLE prop use .styles.prop_name */
                 suitcase_svg.setAttribute("stroke","#000");
-                let animation_cursor = document.querySelector("span.wrap");
-                animation_cursor.setAttribute("style", "border-right: 0.08em solid #000;");
+                let animation_cursor = document.querySelector(".wrap");
+                animation_cursor.setAttribute("style", "border-right: 0.08em solid #000");
 
                 var anchors = document.querySelectorAll("a");
                 anchors.forEach(function(el){
@@ -231,14 +231,11 @@
                     el.setAttribute("style", "color: black;");
                 });
 
-                var cursor_colour = '#000';
-
                 sessionStorage.setItem('mode', 'light');
                 console.log(sessionStorage);
             }
         }
     
-
     var TxtType = function(el, toRotate, period) {
         this.toRotate = toRotate;
         this.el = el;
@@ -247,12 +244,12 @@
         this.txt = '';
 
         this.colour = '';
-        
+        this.cursor_colour = '';
 
         this.tick();
         this.isDeleting = false;
     };
-
+    
     TxtType.prototype.tick = function() {
         var i = this.loopNum % this.toRotate.length;
         var fullTxt = this.toRotate[i];
@@ -265,15 +262,17 @@
 
         if (window.sessionStorage.getItem('mode') == 'dark') {
             this.colour = 'white;';
+            this.cursor_colour = 'white';
         }
         else if (window.sessionStorage.getItem('mode') == 'light') {
             this.colour = 'black;';
+            this.cursor_colour = 'black';
         }        
 
-        console.log(sessionStorage);
-        console.log(this.colour);
+        /* console.log(sessionStorage);
+        console.log(this.colour); */
         
-        this.el.innerHTML = `<span style="color: ${this.colour}" class="wrap">${this.txt}</span>`;
+        this.el.innerHTML = `<span style="color: ${this.colour}; border-right: 0.08em solid ${this.cursor_colour};" class="wrap">${this.txt}</span>`;
 
         var that = this;
         var delta = 200 - ((Math.random() * 0.2 + 0.79) * 100);
@@ -305,14 +304,17 @@
             }
         }
         /* 
-        // INJECT CSS, 'FOR typing Cursor!''
-        //Got rid of this & put it in my CSS code, so that can alter colour same way altering other colours
-        console.log(cursor_colour);
-        var css = document.createElement("style");
-        css.type = "text/css";
-        // Using cursor_colour var I created
-        css.innerHTML = `.typewrite > .wrap { border-right: 0.08em solid ${cursor_colour}}`;
-        document.body.appendChild(css);
+            // INJECT CSS, 'FOR typing Cursor!''
+            // Got rid of this & put it in my CSS code, so that can alter colour same way altering other colours
+            console.log(cursor_colour);
+            var css = document.createElement("style");
+            css.type = "text/css";
+            // Using cursor_colour var I created
+            css.innerHTML = `.typewrite > .wrap { border-right: 0.08em solid ${cursor_colour}}`;
+            document.body.appendChild(css);
+        */ 
+        /*
+            
         */
     };
     </script>

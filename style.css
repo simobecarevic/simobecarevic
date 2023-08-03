@@ -189,9 +189,6 @@ header {
     display: inline-block;
 }
 
-.typewrite > .wrap { 
-    border-right: 0.08em solid #000;
-}
 
 
 .bookshelf-container {
