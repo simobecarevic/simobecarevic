@@ -95,7 +95,7 @@ header {
     display: none;
     flex-direction: column;
     justify-content: center;
-    background-color: yellow;
+    background-color: rgb(253,186,116); 
     border-radius: 0.375rem;
     border-style: none;
 }
