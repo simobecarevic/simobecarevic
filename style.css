@@ -190,6 +190,10 @@ header {
     display: inline-block;
 }
 
+.ani-start {
+    margin: 0 0.15em 0 0;
+}
+
 .bookshelf-container {
     padding: 60px 0; 
     width: 100%;
