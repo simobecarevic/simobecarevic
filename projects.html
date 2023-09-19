@@ -62,10 +62,11 @@
             console.log(sessionStorage);
         } 
         else if (sessionStorage.getItem('mode') == 'dark') {
+            // Below has to be done, bc when a new .html page of our WS loads (we navigate/click to it), the sessionStorage of dark is maintained, but the .html & .css files are reloaded mean the .dark class has NOT been added, so have to reset it, and toggleDarkMode() to bring itback to dark, & have the .html F updated with the .dark-mode class added everywhere
             sessionStorage.setItem('mode', 'light');
             toggleDarkMode();
         }
-
+        
         else {
             
         }
@@ -95,6 +96,12 @@
                     el.setAttribute("style", "color: white;");
                 });
 
+                /* projects.html */
+                var headings = document.querySelectorAll("h3");
+                headings.forEach(function(el){
+                    el.classList.toggle("dark-mode");
+                });
+
                 sessionStorage.setItem('mode', 'dark');
                 console.log(sessionStorage);
             }
@@ -120,6 +127,12 @@
                 var icons = document.querySelectorAll(".fa-brands");
                 icons.forEach(function(el){
                     el.setAttribute("style", "color: black;");
+                });
+
+                /* projects.html */
+                var headings = document.querySelectorAll("h3");
+                headings.forEach(function(el){
+                    el.classList.toggle("dark-mode");
                 });
 
                 sessionStorage.setItem('mode', 'light');
