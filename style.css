@@ -313,6 +313,11 @@ form button:hover {
 
 /* projects.html */
 
+.main-content-projects {
+    margin: 0 auto;
+    width: 80%;
+}
+
 .projects-heading {
     padding: 110px 0 0 0;
     font-size: 1.875rem;
@@ -323,21 +328,15 @@ form button:hover {
     display: flex;
 }
 
-.plCompTool {
-    border-color: grey;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 6px;
-
-    display:
-}
-
 .plCompToolImage {
     width: 350px;
+    border-radius: 0.375rem;
 }
 
 .plCompToolHeading {
     font-size: 0.875rem;
+    margin: 5px auto 0;
+    width: max-content;
 }
 
 /* Media Queries for Responsive Design */
@@ -505,6 +504,20 @@ form button:hover {
         width: 75px;
         height: auto;
     }
+
+    .plCompToolImage {
+        width: 225px;
+        border-radius: 0.3rem;
+    }
+    
+    .plCompToolHeading {
+        font-size: 0.7rem;
+        margin: 3px auto 0;
+    }    
+
+    .projects {
+        padding: 75px 0 0 0;
+    }
     
 }
 
@@ -535,6 +548,23 @@ form button:hover {
         margin: 5px auto 20px;
     }
 
+    .plCompToolImage {
+        width: 160px;
+        border-radius: 0.3rem;
+    }
+    
+    .plCompToolHeading {
+        font-size: 0.5rem;
+        margin: 3px auto 0;
+    }    
+
+    .projects {
+        padding: 55px 0 0 0;
+    }
+
+    .main-content-projects {
+        width: 90%;
+    }
 
 }
 
