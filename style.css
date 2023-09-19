@@ -242,6 +242,8 @@ body {
     min-height: 100vh;
 }
 
+
+
 /* 
 contact_me.html
 
@@ -309,13 +311,33 @@ form button:hover {
 
 
 
-
-
 /* projects.html */
 
 .projects-heading {
     padding: 110px 0 0 0;
     font-size: 1.875rem;
+}
+
+.projects {
+    padding: 100px 0 0 0;
+    display: flex;
+}
+
+.plCompTool {
+    border-color: grey;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 6px;
+
+    display:
+}
+
+.plCompToolImage {
+    width: 350px;
+}
+
+.plCompToolHeading {
+    font-size: 0.875rem;
 }
 
 /* Media Queries for Responsive Design */
